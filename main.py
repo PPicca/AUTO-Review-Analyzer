@@ -20,9 +20,9 @@ train_bow_features = p1.extract_bow_feature_vectors(train_texts, dictionary)
 val_bow_features = p1.extract_bow_feature_vectors(val_texts, dictionary)
 test_bow_features = p1.extract_bow_feature_vectors(test_texts, dictionary)
 
--------------------------------------------------------------------------------
-Problem 5
--------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# Problem 5
+#-------------------------------------------------------------------------------
 
 toy_features, toy_labels = toy_data = utils.load_toy_data('toy_data.tsv')
 
@@ -64,9 +64,9 @@ avg_peg_train_accuracy, avg_peg_val_accuracy = \
 print("{:50} {:.4f}".format("Training accuracy for Pegasos:", avg_peg_train_accuracy))
 print("{:50} {:.4f}".format("Validation accuracy for Pegasos:", avg_peg_val_accuracy))
 
--------------------------------------------------------------------------------
-Problem 8
--------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# Problem 8
+#-------------------------------------------------------------------------------
 
 data = (train_bow_features, train_labels, val_bow_features, val_labels)
 
@@ -98,12 +98,12 @@ utils.plot_tune_results('Avg Perceptron', 'T', Ts, *avg_pct_tune_results)
 utils.plot_tune_results('Pegasos', 'T', Ts, *peg_tune_results_T)
 utils.plot_tune_results('Pegasos', 'L', Ls, *peg_tune_results_L)
 
--------------------------------------------------------------------------------
-Use the best method (perceptron, average perceptron or Pegasos) along with
-the optimal hyperparameters according to validation accuracies to test
-against the test dataset. The test data has been provided as
-test_bow_features and test_labels.
--------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# Use the best method (perceptron, average perceptron or Pegasos) along with
+# the optimal hyperparameters according to validation accuracies to test
+# against the test dataset. The test data has been provided as
+# test_bow_features and test_labels.
+#-------------------------------------------------------------------------------
 
 T = 25
 L = 0.01
@@ -114,10 +114,10 @@ print("{:50} {:.4f}".format("Training accuracy for Pegasos:", avg_peg_train_accu
 print("{:50} {:.4f}".format("Validation accuracy for Pegasos:", avg_peg_val_accuracy))
 
 
--------------------------------------------------------------------------------
-Assign to best_theta, the weights (and not the bias!) learned by your most
-accurate algorithm with the optimal choice of hyperparameters.
--------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+# Assign to best_theta, the weights (and not the bias!) learned by your most
+# accurate algorithm with the optimal choice of hyperparameters.
+#-------------------------------------------------------------------------------
 T = 25
 L = 0.01
 
